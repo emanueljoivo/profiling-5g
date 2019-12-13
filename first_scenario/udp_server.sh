@@ -4,7 +4,7 @@ set -o xtrace
 
 OUTPUT_FILE="$(date +%s)".udp.csv
 
-iperf --server --enhanced --udp | tee "${OUTPUT_FILE}"
+iperf --udp --server | tee "${OUTPUT_FILE}"
 
 mkdir -p data/
 

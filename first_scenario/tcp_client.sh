@@ -2,4 +2,4 @@
 
 set -o xtrace
 
-iperf --client 189.40.186.130 --tradeoff --time 60 --interval 1
+iperf --client 189.40.186.130 --time 60 --interval 1
