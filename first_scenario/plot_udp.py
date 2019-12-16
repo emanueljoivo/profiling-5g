@@ -8,7 +8,7 @@ bandwidth = []
 def to_mega(b):
     return b / (10**6)
 
-with open('data/tcp.csv') as csv_file:
+with open('data/udp.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
 
     for row in csv_reader:
