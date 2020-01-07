@@ -2,7 +2,7 @@
 
 set -o xtrace
 
-OUTPUT_FILE="tcp_upload_5gpro.csv"
+OUTPUT_FILE="tcp_dowload_s8csv"
 
 iperf --server --interval 1 --reportstyle c | tee "${OUTPUT_FILE}"
 
