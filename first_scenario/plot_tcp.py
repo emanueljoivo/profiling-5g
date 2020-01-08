@@ -1,14 +1,14 @@
 import matplotlib.pyplot as plt
 import csv
 
+def to_mega(b):
+    return b / (10**6)
+
 intervals = []
 data_transfer = []
 bandwidth = []
 
-def to_mega(b):
-    return b / (10**6)
-
-with open('data/tcp_upload.csv') as csv_file:
+with open('data/tcp_download.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
 
     for row in csv_reader:
@@ -22,5 +22,5 @@ intervals = list(map(lambda interval: float(interval.split("-")[-1]), intervals)
 plt.plot(intervals, bandwidth)
 plt.ylabel("bandwidth in Mb/s")
 plt.xlabel("time in sec")
-plt.title("Scenario I - TCP upload")
+plt.title("TCP Download")
 plt.show()
