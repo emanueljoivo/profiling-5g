@@ -8,7 +8,7 @@ intervals = []
 data_transfer = []
 bandwidth = []
 
-with open('data/tcp_upload.csv') as csv_file:
+with open('data/tcp_download_s8.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
 
     for row in csv_reader:
@@ -22,5 +22,5 @@ intervals = list(map(lambda interval: float(interval.split("-")[-1]), intervals)
 plt.plot(intervals, bandwidth)
 plt.ylabel("bandwidth in Mb/s")
 plt.xlabel("time in sec")
-plt.title("TCP Upload")
+plt.title("TCP Download S8")
 plt.show()
