@@ -8,7 +8,7 @@ intervals = []
 data_transfer = []
 bandwidth = []
 
-with open('data/tcp_download_s8.csv') as csv_file:
+with open('data/tcp_upload_s8.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
 
     for row in csv_reader:
