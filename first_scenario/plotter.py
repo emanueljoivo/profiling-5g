@@ -13,9 +13,9 @@ if len(sys.argv) < 4:
     print("usage:\nplotter.py <protocol> <test_type> <device>")
     sys.exit(1)
 else:
-    protocol = str(sys.argv[1])
-    test_type = str(sys.argv[2])
-    device = str(sys.argv[3])
+    protocol = str(sys.argv[1]).lower()
+    test_type = str(sys.argv[2]).lower()
+    device = str(sys.argv[3]).lower()
 
     intervals = []
     data_transfer = []
