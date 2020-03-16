@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import matplotlib.pyplot as plt
 import csv
 import sys
@@ -10,18 +12,20 @@ def is_empty(v):
 
 # py plotter.py protocol test_type device
 if len(sys.argv) < 4:
-    print("usage:\nplotter.py <protocol> <test_type> <device>")
+    print("usage:\nplotter.py <protocol> <test_type> <device> <timestamp>")
     sys.exit(1)
 else:
     protocol = str(sys.argv[1]).lower()
     test_type = str(sys.argv[2]).lower()
     device = str(sys.argv[3]).lower()
+    timestamp = str(sys.argv[4])
 
     intervals = []
     data_transfer = []
     bandwidth = []
 
-    file_location = "data/{}_{}_{}.csv".format(protocol, test_type, device)
+    file_location = "data/{}_{}_{}_{}.csv".format(protocol, test_type, device, timestamp)
+    print("Timestamp {}".format(timestamp))
     try:
         with open(file_location) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
