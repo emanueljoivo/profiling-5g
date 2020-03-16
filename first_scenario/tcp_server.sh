@@ -2,9 +2,9 @@
 
 set -o xtrace
 
-OUTPUT_FILE="tcp_dowload_s8csv"
+OUTPUT_FILE="tcp_download-mi-5g-pro-16032020.csv"
 
-iperf --server --interval 1 --reportstyle c | tee "${OUTPUT_FILE}"
+iperf --server -r --interval 1 --reportstyle c | tee "${OUTPUT_FILE}"
 
 mkdir -p data/
 
